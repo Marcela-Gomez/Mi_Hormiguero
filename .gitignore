@@ -1,0 +1,108 @@
+# =========================================
+# TUS ENTRADAS ORIGINALES
+# =========================================
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# =========================================
+# ANDROID STUDIO / INTELLIJ
+# =========================================
+.idea/
+*.iws
+*.ipr
+
+# =========================================
+# GRADLE
+# =========================================
+*.gradle
+gradlew
+gradlew.bat
+gradle/
+**/.gradle/
+**/build/
+
+# =========================================
+# APK / AAB / ARTIFACTS
+# =========================================
+*.apk
+*.ap_
+*.aab
+
+# =========================================
+# NATIVE BUILD
+# =========================================
+**/.externalNativeBuild
+**/.cxx
+
+# =========================================
+# KEYSTORE / SECURITY (MUY IMPORTANTE)
+# =========================================
+*.jks
+*.keystore
+*.key
+*.pem
+*.p12
+*.pfx
+
+# =========================================
+# LOGS
+# =========================================
+*.log
+
+# =========================================
+# FIREBASE / FABRIC
+# =========================================
+crashlytics-build.properties
+fabric.properties
+**/google-services.json
+**/GoogleService-Info.plist
+
+# =========================================
+# SISTEMA OPERATIVO
+# =========================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Linux/Unix
+*.swp
+*.swo
+
+# =========================================
+# BACKUPS / TEMP
+# =========================================
+*.tmp
+*.bak
+*.backup
+
+# =========================================
+# ENTORNOS / SECRETOS
+# =========================================
+*.env
+.env.*
+secrets.properties
+
+# =========================================
+# CARPETAS DE GENERACIÓN AUTOMÁTICA
+# =========================================
+.gen/
+generated/
