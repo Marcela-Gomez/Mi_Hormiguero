@@ -1,108 +1,23 @@
-# =========================================
-# TUS ENTRADAS ORIGINALES
-# =========================================
-*.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
-local.properties
-
-# =========================================
-# ANDROID STUDIO / INTELLIJ
-# =========================================
+# === Android Studio / IntelliJ ===
 .idea/
-*.iws
-*.ipr
+*.iml
 
-# =========================================
-# GRADLE
-# =========================================
-*.gradle
-gradlew
-gradlew.bat
-gradle/
-**/.gradle/
+# === Gradle ===
+.gradle/
+build/
 **/build/
 
-# =========================================
-# APK / AAB / ARTIFACTS
-# =========================================
-*.apk
-*.ap_
-*.aab
+# === Archivos locales (NO se comparten) ===
+local.properties
 
-# =========================================
-# NATIVE BUILD
-# =========================================
-**/.externalNativeBuild
-**/.cxx
+# === Native build ===
+.externalNativeBuild/
+.cxx/
 
-# =========================================
-# KEYSTORE / SECURITY (MUY IMPORTANTE)
-# =========================================
+# === Sistemas operativos ===
+.DS_Store
+Thumbs.db
+
+# === Seguridad (keystore firmas) ===
 *.jks
 *.keystore
-*.key
-*.pem
-*.p12
-*.pfx
-
-# =========================================
-# LOGS
-# =========================================
-*.log
-
-# =========================================
-# FIREBASE / FABRIC
-# =========================================
-crashlytics-build.properties
-fabric.properties
-**/google-services.json
-**/GoogleService-Info.plist
-
-# =========================================
-# SISTEMA OPERATIVO
-# =========================================
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Windows
-Thumbs.db
-ehthumbs.db
-desktop.ini
-
-# Linux/Unix
-*.swp
-*.swo
-
-# =========================================
-# BACKUPS / TEMP
-# =========================================
-*.tmp
-*.bak
-*.backup
-
-# =========================================
-# ENTORNOS / SECRETOS
-# =========================================
-*.env
-.env.*
-secrets.properties
-
-# =========================================
-# CARPETAS DE GENERACIÓN AUTOMÁTICA
-# =========================================
-.gen/
-generated/
