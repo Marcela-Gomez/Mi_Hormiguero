@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Mi Hormiguero</string>
+    <string name="mi_hormiguero">Mi Hormiguero</string>
+    <string name="splash_description">Walker ant</string>
+    <string name="op1Menu">Metas</string>
+    <string name="op2Menu">Hormigas</string>
+    <string name="op3Menu">Presupuesto</string>
 </resources>

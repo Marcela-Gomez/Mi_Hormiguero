@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+<item
+    android:id="@+id/metasMenu"
+    app:showAsAction="ifRoom"
+    android:title="@string/op1Menu"
+    android:icon="@drawable/meta"/><item
+    android:id="@+id/hormigasMenu"
+    app:showAsAction="ifRoom"
+    android:title="@string/op2Menu"
+    android:icon="@drawable/hormigam"/><item
+    android:id="@+id/presupuestoMenu"
+    app:showAsAction="ifRoom"
+    android:title="@string/op3Menu"
+    android:icon="@drawable/presupuesto"/>
+</menu>
