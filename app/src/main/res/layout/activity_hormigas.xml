@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    tools:context=".Hormigas">
+
+    <!-- Espacio Superior (Título) -->
+    <TextView
+        android:id="@+id/text_total_hormigas_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TOTAL DE\nHORMIGAS"
+        android:gravity="center"
+        android:textColor="#C79600"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginTop="50dp" />
+
+    <!-- Total de Hormigas (Número) -->
+    <TextView
+        android:id="@+id/text_total_hormigas_valor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:textColor="#C79600"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="32dp" />
+
+    <!-- RECYCLER VIEW (Lista Dinámica de Gastos Hormiga) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_gastos_hormiga"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="40dp"
+        tools:itemCount="1"
+        tools:listitem="@layout/item_gasto_hormiga"/>
+
+    <!-- Sección de Impacto y Gastos -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="60dp">
+
+        <!-- Fila 1: Impacto de ahorros -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Impacto de ahorros:"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/text_impacto_ahorros"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30%"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Fila 2: Total de gastos -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Total de gastos:"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/text_total_gastos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Fila 3: Margen de gasto -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Margen de gasto:"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/text_margen_gasto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$100"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Controles Inferiores (Botones de Agregar y Home) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Botón de Agregar (+) -->
+        <ImageButton
+            android:id="@+id/button_add"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/outline_add_24"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:layout_marginEnd="60dp"
+            android:contentDescription="Botón de Agregar Gasto Hormiga" />
+
+        <!-- Botón de Inicio (Home) -->
+        <ImageButton
+            android:id="@+id/button_home"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/outline_add_home_24"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:contentDescription="Botón de Inicio/Volver" />
+    </LinearLayout>
+
+</LinearLayout>

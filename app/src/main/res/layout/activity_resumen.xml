@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5E5D5"
+    tools:context=".resumen">
+
+    <!-- 1. TÍTULO PRINCIPAL FIJO (CAMBIADO A RESUMEN) -->
+    <TextView
+        android:id="@+id/text_resumen_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="RESUMEN"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#C8AA4A"
+        android:paddingBottom="16dp"/>
+
+    <!-- 2. CONTENIDO SCROLLABLE -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/text_resumen_titulo"
+        android:layout_above="@+id/layout_botones_inferior_resumen"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <!-- SECCIÓN CENTRAL DE TOTALES (Fondo Blanco/Claro) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_section_background"
+                android:padding="20dp"
+                android:layout_marginBottom="24dp">
+
+                <!-- Fila de Total Ingresos -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Total Ingresos"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:id="@+id/text_total_ingresos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$ 950.00"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#00A000"/>
+                </LinearLayout>
+
+                <!-- Fila de Total Gastos -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Total Gastos"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:id="@+id/text_total_gastos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$ 190.50"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#D50000"/>
+                </LinearLayout>
+
+                <!-- Fila: Total de gastos hormiga (NUEVO CAMPO) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Total de gastos hormiga"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:id="@+id/text_total_gastos_hormiga"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$ 120.00"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#D50000"/>
+                </LinearLayout>
+
+                <!-- Fila: Total de ahorros (NUEVO CAMPO) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="16dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Total de ahorros"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:id="@+id/text_total_ahorros"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$ 100.00"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#00A000"/>
+                </LinearLayout>
+
+                <!-- Separador (Línea Fina) -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#CCCCCC"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Fila de Ahorro/Falta (Mantenemos el campo principal de balance) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/text_titulo_ahorro"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Te faltan"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:id="@+id/text_ahorro_final"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$ 50.00"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="#D50000"/>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- FIN DE SECCIÓN CENTRAL DE TOTALES -->
+
+            <!-- SECCIÓN DE MENSAJE PERSONALIZADO -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/rounded_section_background"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/image_hormiga"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/hormigam"
+                    app:tint="#D50000"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="Icono de Alerta"/>
+
+                <TextView
+                    android:id="@+id/text_mensaje_resumen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¡Cuidado! Te faltan $ 50.00 para cubrir tus gastos."
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:textStyle="italic"/>
+
+            </LinearLayout>
+
+            <!-- MENSAJE ANTES DE BOTONES (SOLICITADO) -->
+            <TextView
+                android:id="@+id/text_pregunta_cambiar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¿Desea cambiar el presupuesto actual?"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:paddingBottom="16dp"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- 3. BOTONES INFERIORES FIJOS -->
+    <LinearLayout
+        android:id="@+id/layout_botones_inferior_resumen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp"
+        android:gravity="center"
+        android:background="#FFFFFF">
+
+        <!-- Botón CONSERVAR (Mantenemos el texto y color original) -->
+        <Button
+            android:id="@+id/button_conservar"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="CONSERVAR"
+            android:backgroundTint="#C8AA4A"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- Botón CAMBIAR (Mantenemos el texto y color original) -->
+        <Button
+            android:id="@+id/button_eliminar"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="CAMBIAR"
+            android:backgroundTint="#D50000"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+</RelativeLayout>

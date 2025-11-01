@@ -16,6 +16,13 @@
             android:exported="false" />
         <activity
             android:name=".agregar_meta"
+            android:name=".resumen"
+            android:exported="false" />
+        <activity
+            android:name=".presupuestos"
+            android:exported="false" />
+        <activity
+            android:name=".Hormigas"
             android:exported="false" />
         <activity
             android:name=".inicio"
