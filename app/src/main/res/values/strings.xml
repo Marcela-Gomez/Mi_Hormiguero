@@ -13,4 +13,8 @@
     <string name="tvCantidad">Cantidad</string>
     <string name="tv_fecha">Fecha fin</string>
     <string name="agrebtn">Agrebtn</string>
+    <string name="meta">Meta:</string>
+    <string name="porcentaje">Porcentaje:</string>
+    <string name="cantidad">Cantidad:</string>
+    <string name="fecha">Fecha:</string>
 </resources>
