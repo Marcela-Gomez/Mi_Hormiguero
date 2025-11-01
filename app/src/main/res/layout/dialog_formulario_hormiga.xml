@@ -36,7 +36,6 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:background="@drawable/border_rounded_white_flat"
             android:hint="Ej: Comprar café"
             android:inputType="textCapSentences"
             android:padding="10dp" />
@@ -55,7 +54,6 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
-            android:background="@drawable/border_rounded_white_flat"
             android:hint="Ej: 1.50"
             android:inputType="numberDecimal"
             android:padding="10dp" />

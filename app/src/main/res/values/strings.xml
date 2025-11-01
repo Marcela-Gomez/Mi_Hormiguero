@@ -17,4 +17,10 @@
     <string name="porcentaje">Porcentaje:</string>
     <string name="cantidad">Cantidad:</string>
     <string name="fecha">Fecha:</string>
+    <string name="et_nombreI">Ingrese el nombre del ingreso</string>
+    <string name="et_MontoI">Ingrese la cantidad de su ingreso</string>
+    <string name="et_gastoI">Ingrese el nombre de su gasto</string>
+    <string name="et_montoI">Ingrese el monto de su gasto</string>
+    <string name="add_plantilla">Add plantilla</string>
+    <string name="nombre_plantilla">nombre plantilla</string>
 </resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/background"
+    tools:context=".et_ingresos">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bangers"
+        android:text="@string/text_agregarM"
+        android:textColor="@color/color_text"
+        android:textSize="50sp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_margin="10dp"
+        android:id="@+id/tvnombre"
+        android:layout_width="320dp"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:text="@string/tvNombre" />
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="@string/et_nombreI"
+        android:importantForAutofill="no"
+        android:inputType="text" />
+
+    <TextView
+        android:layout_margin="10dp"
+        android:id="@+id/tvCantidad"
+        android:layout_width="320dp"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:text="@string/tvCantidad" />
+
+    <EditText
+        android:id="@+id/etCantidad"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="@string/et_MontoI"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal" />
+
+    <ImageButton
+        android:contentDescription="@string/agrebtn"
+        android:onClick="editarIngreso"
+        android:backgroundTint="@color/background"
+        android:src="@drawable/baseline_check_circle_24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+</LinearLayout>

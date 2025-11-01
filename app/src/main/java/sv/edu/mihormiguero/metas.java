@@ -1,24 +1,36 @@
 package sv.edu.mihormiguero;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
 
 public class metas extends AppCompatActivity {
+
+    RecyclerView rvMetas;
+    ArrayList<metasC> lista = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_metas);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+        rvMetas = findViewById(R.id.rvMetas);
+        rvMetas.setLayoutManager(new LinearLayoutManager(this));
+
+        // 👉 Datos de prueba
+        lista.add(new metasC("Viaje", "$200", "70%", "10/11/2025"));
+        lista.add(new metasC("Laptop", "$700", "30%", "25/12/2025"));
+        lista.add(new metasC("Moto", "$1500", "10%", "10/06/2026"));
+
+        MetaAdapter adapter = new MetaAdapter(lista);
+        rvMetas.setAdapter(adapter);
     }
 }
