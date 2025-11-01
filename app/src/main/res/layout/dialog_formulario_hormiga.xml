@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <!-- Título Dinámico (Agregar o Editar) -->
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="AGREGAR GASTO HORMIGA"
+            android:textColor="#C79600"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Campo Nombre -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edit_nombre"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/border_rounded_white_flat"
+            android:hint="Ej: Comprar café"
+            android:inputType="textCapSentences"
+            android:padding="10dp" />
+
+        <!-- Campo Cantidad -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cantidad"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edit_cantidad"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/border_rounded_white_flat"
+            android:hint="Ej: 1.50"
+            android:inputType="numberDecimal"
+            android:padding="10dp" />
+
+        <!-- Botón de Aceptar (Chequeo Verde) -->
+        <ImageButton
+            android:id="@+id/button_accept"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Aceptar Gasto Hormiga"
+            android:scaleType="fitCenter"
+            android:src="@drawable/outline_bookmark_check_24" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:gravity="center_vertical">
+
+    <!-- Nombre de la Transacción (Agua, Salario, etc.) -->
+    <TextView
+        android:id="@+id/text_nombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="18sp"
+        android:textColor="#3D291F"
+        android:text="Nombre de la Transacción"/>
+
+    <!-- Cantidad de la Transacción -->
+    <TextView
+        android:id="@+id/text_cantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#C79F5E"
+        android:text="$120.00"/>
+
+    <!-- Botón de Opciones (...) -->
+    <ImageButton
+        android:id="@+id/button_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Opciones"
+        android:tint="#C79F5E"
+        android:src="@drawable/outline_atr_24"
+        tools:ignore="UseAppTint" />
+
+</LinearLayout>

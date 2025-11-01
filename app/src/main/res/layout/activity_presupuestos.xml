@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5E5D5"
+    tools:context=".presupuestos">
+
+    <!-- 1. TÍTULO PRINCIPAL FIJO (PRESUPUESTO) -->
+    <TextView
+        android:id="@+id/text_presupuesto_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="PRESUPUESTO"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#C8AA4A"
+        android:paddingBottom="16dp"/>
+
+    <!-- 2. CONTENIDO SCROLLABLE (LISTAS DE INGRESOS Y GASTOS) -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/text_presupuesto_titulo"
+        android:layout_above="@+id/layout_botones_inferior"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- INICIANDO SECCIÓN DE INGRESOS (ESTÁTICA) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rounded_section_background"
+                android:padding="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ingresos:"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+                    <ImageButton
+                        android:id="@+id/button_add_ingreso"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/outline_add_24"
+                        android:contentDescription="Agregar Ingreso"
+                        app:tint="@color/black"
+                        android:scaleType="fitCenter"/>
+                </RelativeLayout>
+
+                <!-- ITEM ESTÁTICO: SALARIO -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Salario"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"/>
+                    <ImageButton
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/outline_atr_24"
+                        android:contentDescription="Opciones Salario"
+                        app:tint="@color/black"/>
+                </RelativeLayout>
+
+                <!-- ITEM ESTÁTICO: EMPRENDIMIENTO -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Emprendimiento"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"/>
+                    <ImageButton
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/outline_atr_24"
+                        android:contentDescription="Opciones Emprendimiento"
+                        app:tint="@color/black"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+            <!-- FIN DE SECCIÓN DE INGRESOS (ESTÁTICA) -->
+
+
+            <!-- INICIANDO SECCIÓN DE GASTOS (DINÁMICA - RecyclerView) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_section_background"
+                android:padding="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gastos:"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+                    <ImageButton
+                        android:id="@+id/button_add_gasto"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/outline_add_24"
+                        android:contentDescription="Agregar Gasto"
+                        app:tint="@color/black"
+                        android:scaleType="fitCenter"/>
+                </RelativeLayout>
+
+                <!-- RECYCLERVIEW PARA GASTOS (DINÁMICO) -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_gastos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/item_transaccion"/>
+
+            </LinearLayout>
+            <!-- FIN DE SECCIÓN DE GASTOS (DINÁMICA) -->
+
+            <!-- ESPACIO DE RELLENO PARA BOTÓN INFERIOR -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="80dp"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- 3. BOTÓN INFERIOR FIJO (HOME) -->
+    <LinearLayout
+        android:id="@+id/layout_botones_inferior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="8dp"
+        android:paddingBottom="24dp">
+
+        <ImageButton
+            android:id="@+id/button_home"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/circle_background"
+            android:src="@drawable/outline_add_home_24"
+            android:contentDescription="Ir a Inicio"
+            app:tint="@color/white"
+            android:scaleType="centerInside"/>
+    </LinearLayout>
+</RelativeLayout>

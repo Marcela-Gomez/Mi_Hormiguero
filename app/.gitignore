@@ -1,1 +1,23 @@
-/build
+# === Android Studio / IntelliJ ===
+.idea/
+*.iml
+
+# === Gradle ===
+.gradle/
+build/
+**/build/
+
+# === Archivos locales (NO se comparten) ===
+local.properties
+
+# === Native build ===
+.externalNativeBuild/
+.cxx/
+
+# === Sistemas operativos ===
+.DS_Store
+Thumbs.db
+
+# === Seguridad (keystore firmas) ===
+*.jks
+*.keystore
