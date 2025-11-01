@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:gravity="center"
+    tools:context=".agregar_meta">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/bangers"
+    android:text="@string/text_agregarM"
+    android:textColor="@color/color_text"
+    android:textSize="50sp"
+    android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_margin="10dp"
+        android:id="@+id/tvnombre"
+        android:layout_width="320dp"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:text="@string/tvNombre" />
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="@string/etNombreM"
+        android:importantForAutofill="no"
+        android:inputType="text" />
+
+    <TextView
+        android:layout_margin="10dp"
+        android:id="@+id/tvCategoria"
+        android:layout_width="320dp"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:text="@string/tvCategoria" />
+
+    <Spinner
+        android:id="@+id/sCategoria"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="text" />
+
+
+    <TextView
+        android:layout_margin="10dp"
+        android:id="@+id/tvCantidad"
+        android:layout_width="320dp"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:text="@string/tvCantidad" />
+
+    <EditText
+        android:id="@+id/etCantidad"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="@string/etMontoM"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal" />
+
+
+    <TextView
+        android:layout_margin="10dp"
+        android:id="@+id/tvFecha"
+        android:layout_width="320dp"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_fecha" />
+    <DatePicker
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:background="@color/background"
+        android:datePickerMode="spinner"
+        />
+
+    <ImageButton
+        android:contentDescription="@string/agrebtn"
+        android:onClick="guardarMeta"
+        android:backgroundTint="@color/background"
+        android:src="@drawable/baseline_check_circle_24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+</LinearLayout>

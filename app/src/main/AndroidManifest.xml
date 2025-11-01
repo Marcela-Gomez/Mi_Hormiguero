@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MiHormiguero">
         <activity
+            android:name=".metas"
+            android:exported="false" />
+        <activity
+            android:name=".agregar_meta"
             android:name=".resumen"
             android:exported="false" />
         <activity

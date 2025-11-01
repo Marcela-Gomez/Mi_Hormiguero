@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:background="@color/background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<TableLayout
+    android:layout_weight="1"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TableRow tools:ignore="UselessParent">
+    <TextView
+        android:id="@+id/tvMeta"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:text="@string/meta"
+        android:fontFamily="sans-serif-black"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:layout_weight="1"
+        android:id="@+id/tvNombreMeta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+    </TableRow>
+    <TableRow tools:ignore="UselessParent">
+        <TextView
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:text="@string/cantidad"
+            android:fontFamily="sans-serif-black"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:id="@+id/tvCantidad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+    </TableRow>
+    <TableRow tools:ignore="UselessParent">
+        <TextView
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:text="@string/porcentaje"
+            android:fontFamily="sans-serif-black"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:id="@+id/tvPorcentaje"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+    </TableRow>
+    <TableRow tools:ignore="UselessParent">
+        <TextView
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:text="@string/fecha"
+            android:fontFamily="sans-serif-black"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:id="@+id/tvFecha"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+    </TableRow>
+</TableLayout>
+    <!-- Tu menú de tres puntitos -->
+    <ImageView
+        android:contentDescription="@string/op1Menu"
+        android:id="@+id/btnMenu"
+        android:src="@drawable/outline_more_vert_24"
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+</LinearLayout>

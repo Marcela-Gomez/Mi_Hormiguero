@@ -5,4 +5,16 @@
     <string name="op1Menu">Metas</string>
     <string name="op2Menu">Hormigas</string>
     <string name="op3Menu">Presupuesto</string>
+    <string name="text_agregarM">Agregar meta</string>
+    <string name="etNombreM">Ingrese el nombre de la meta</string>
+    <string name="tvNombre">Nombre</string>
+    <string name="tvCategoria">Categoria</string>
+    <string name="etMontoM">Ingrese el monto de su meta</string>
+    <string name="tvCantidad">Cantidad</string>
+    <string name="tv_fecha">Fecha fin</string>
+    <string name="agrebtn">Agrebtn</string>
+    <string name="meta">Meta:</string>
+    <string name="porcentaje">Porcentaje:</string>
+    <string name="cantidad">Cantidad:</string>
+    <string name="fecha">Fecha:</string>
 </resources>
